@@ -15,8 +15,10 @@ function App() {
   }
 
   const makeRequest = event => {
-    // event.preventDefault();
-    new Request(token).makeRequest();
+    const request = new Request(token);
+    request.getDevices()
+    .then(devices => devices.devices[0].deviceGid)
+    .then(deviceGid => request.getChartUsage(deviceGid));
   }
 
   return (
