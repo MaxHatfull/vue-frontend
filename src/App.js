@@ -1,12 +1,18 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import authenticate from './lib/authentication';
 import Request from './lib/request';
+import { Chart } from './Chart';
 
 function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    console.log("data has updated")
+  }, [data]);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -18,7 +24,8 @@ function App() {
     const request = new Request(token);
     request.getDevices()
     .then(devices => devices.devices[0].deviceGid)
-    .then(deviceGid => request.getChartUsage(deviceGid));
+    .then(deviceGid => request.getChartUsage(deviceGid))
+    .then(data => setData(data));
   }
 
   return (
@@ -34,7 +41,10 @@ function App() {
           <button type="submit">Login</button>
         </form>
       </header>
+
       <button onClick={makeRequest}>Do Stuff</button>
+
+      <Chart chartData={data} />
     </div>
   );
 }
