@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/vue-frontend/static/css/main.87d6e283.css",
-    "main.js": "/vue-frontend/static/js/main.e7574ed3.js",
+    "main.css": "/vue-frontend/static/css/main.1b50971b.css",
+    "main.js": "/vue-frontend/static/js/main.8d50cb6d.js",
     "static/js/787.c9e239f7.chunk.js": "/vue-frontend/static/js/787.c9e239f7.chunk.js",
     "index.html": "/vue-frontend/index.html",
-    "main.87d6e283.css.map": "/vue-frontend/static/css/main.87d6e283.css.map",
-    "main.e7574ed3.js.map": "/vue-frontend/static/js/main.e7574ed3.js.map",
+    "main.1b50971b.css.map": "/vue-frontend/static/css/main.1b50971b.css.map",
+    "main.8d50cb6d.js.map": "/vue-frontend/static/js/main.8d50cb6d.js.map",
     "787.c9e239f7.chunk.js.map": "/vue-frontend/static/js/787.c9e239f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.87d6e283.css",
-    "static/js/main.e7574ed3.js"
+    "static/css/main.1b50971b.css",
+    "static/js/main.8d50cb6d.js"
   ]
 }
