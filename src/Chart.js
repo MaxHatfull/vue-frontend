@@ -10,6 +10,7 @@ import {
     Title,
     Tooltip,
     Legend,
+    LogarithmicScale
 } from 'chart.js';
 import {Line} from 'react-chartjs-2';
 
@@ -20,7 +21,8 @@ ChartJS.register(
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
+    LogarithmicScale
 );
 
 const lineColors = [
@@ -50,6 +52,7 @@ export const options = {
       ticks: {
         color: 'white'
       },
+      type: "logarithmic"
     }
   }
 };
@@ -59,7 +62,7 @@ const transformData = (chartDatas, channelNames) => {
     var labels = []
     if(chartDatas.length !== 0)
     {
-        labels = generateLabels(chartDatas[0].firstUsageInstant, 164);
+        labels = generateLabels(chartDatas[0].firstUsageInstant, chartDatas[0].usageList.length);
     }
 
     return {

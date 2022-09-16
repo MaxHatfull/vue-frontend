@@ -32,7 +32,7 @@ class Request {
                     deviceGid +
                     "&channel=" + 
                     channel + 
-                    "&start=2022-09-08T20:00:00.000Z&end=2022-09-15T19:00:00.000Z&scale=1H&energyUnit=KilowattHours";
+                    "&start=2022-09-08T20:00:00.000Z&end=2022-09-12T19:00:00.000Z&scale=1H&energyUnit=KilowattHours";
         const header = {
             method: "GET",
             headers: {
