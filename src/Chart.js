@@ -1,6 +1,6 @@
 import React from 'react';
-import moment from 'moment';
 import "./Chart.css";
+import dayjs from 'dayjs';
 import {
     Chart as ChartJS,
     CategoryScale,
