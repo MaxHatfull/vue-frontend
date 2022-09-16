@@ -50,21 +50,24 @@ export const options = {
   }
 };
 
-const transformData = (chartData) => {
-    //turns chartData into the format needed, following exampleData's format
-    // 1. generate labels
-    const labels = generateLabels(chartData.firstUsageInstant, 164);
-    console.log(chartData)
-    console.log(labels)
+const transformData = (chartDatas) => {
+    console.log(chartDatas)
+    var labels = []
+    if(chartDatas.length !== 0)
+    {
+        labels = generateLabels(chartDatas[0].firstUsageInstant, 164);
+    }
+
     return {
         labels: labels,
-        datasets: [
-            {
-              label: "data",
-              borderColor: 'rgb(255, 99, 132)',
-              data: chartData["usageList"]
-            }
-        ]
+        datasets:
+            chartDatas.map(chartData => {
+                return {
+                    label: "data",
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: chartData["usageList"]
+                }
+            })
     }
 }
 
