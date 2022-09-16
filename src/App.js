@@ -39,6 +39,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className="title">
+          <h1>Energy Usage</h1>
+          <h2>At Max's house</h2>
+        </div>
         <Login loginSuccess={loginSuccess}/>
       </header>
       <div id="content">
