@@ -14,18 +14,47 @@
 }
 
 .App-header, #content {
-  /* background-color: #282c34; */
+  background-color: #281822;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 #content {
   min-height: 90vh;
+}
+
+.App-header h1, h2 {
+  margin: 0px 0px 0px 20px;
+  color: #ffffff;
+  font-family: 'Bungee';
+}
+
+.App-header h2 {
+  font-size: large;
+}
+
+.title {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.login {
+  width: 33%;
+}
+
+.login button {
+  margin: 10px;
+}
+
+.login input {
+  margin-top: 10px;
+  width: 80%;
+  height: 25px;
 }
 
 .App-link {
