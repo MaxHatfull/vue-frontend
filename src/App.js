@@ -45,7 +45,7 @@ function App() {
         <Login loginSuccess={loginSuccess}/>
       </header>
       <div id="content">
-        <Chart chartData={data} channelNames={channelNames}/>
+        {token !== "" ? <Chart chartData={data} channelNames={channelNames}/> : <></>}
       </div>
     </div>
   );
