@@ -30,7 +30,9 @@ class Request {
         const url = BASE_URL +
                     "/AppAPI?apiMethod=getChartUsage&deviceGid=" +
                     deviceGid +
-                    "&channel=" + channel + "&start=2022-09-08T20:00:00.000Z&end=2022-09-15T19:00:00.000Z&scale=1H&energyUnit=KilowattHours";
+                    "&channel=" + 
+                    channel + 
+                    "&start=2022-09-08T20:00:00.000Z&end=2022-09-15T19:00:00.000Z&scale=1H&energyUnit=KilowattHours";
         const header = {
             method: "GET",
             headers: {

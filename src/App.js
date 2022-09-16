@@ -39,10 +39,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Login loginSuccess={loginSuccess}/>
       </header>
       <div id="content">
-        <Login loginSuccess={loginSuccess}/>
-        <Chart chartData={data} />
+        <Chart chartData={data} channelNames={channelNames}/>
       </div>
     </div>
   );
