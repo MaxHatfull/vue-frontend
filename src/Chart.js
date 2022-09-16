@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import "./Chart.css";
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -23,31 +24,30 @@ ChartJS.register(
 );
 
 export const options = {
-    plugins: {
-        legend: {
-            labels: {
-                color: 'rgb(255, 255, 255)'
-            }
-        },
-        scales: {
-            xAxes: {
-                ticks: {
-                    color: 'green'
-                },
-            }
-        }
+  scales: {
+    xAxes: {
+      title: {
+        display: true,
+        text: "DATE AND TIME",
+        color: 'white',
+        padding: 20,
+      },
+      ticks: {
+        color: 'white',
+      },
+    },
+    yAxes: {
+      title: {
+        display: true,
+        text: "ENERGY USAGE (KW)",
+        color: "white",
+        padding: 20,
+      },
+      ticks: {
+        color: 'white'
+      },
     }
-};
-
-const exampleData = {
-    datasets: [
-        {
-            label: 'Dataset 1',
-            // data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-            borderColor: 'rgb(255, 99, 132)',
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        }
-    ],
+  }
 };
 
 const transformData = (chartData) => {
@@ -60,9 +60,9 @@ const transformData = (chartData) => {
         labels: labels,
         datasets: [
             {
-                label: "data",
-                borderColor: 'rgb(255, 99, 132)',
-                data: chartData["usageList"]
+              label: "data",
+              borderColor: 'rgb(255, 99, 132)',
+              data: chartData["usageList"]
             }
         ]
     }
