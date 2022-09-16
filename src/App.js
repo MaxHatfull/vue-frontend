@@ -21,15 +21,14 @@ function App() {
 
   const loginSuccess = (token) => {
     setToken(token)
-    console.log(token)
     const request = new Request(token);
     request.getDevices()
     .then(devices => {
-      console.log(devices)
-      setChannelNames(devices.devices[0].devices[0].channels.map(c => c.name))
+      const channels = devices.devices[0].devices[0].channels.filter(channel => channel.name !== null)
+      setChannelNames(channels.map(c => c.name))
       return {
       gid: devices.devices[0].deviceGid,
-      channels: devices.devices[0].devices[0].channels.map(c => c.channelNum)
+      channels: channels.map(c => c.channelNum)
     }})
     .then(deviceData => deviceData.channels.map(c => request.getChartUsage(deviceData.gid, c)))
     .then(requests => Promise.all(requests))
