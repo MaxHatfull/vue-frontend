@@ -76,11 +76,9 @@ const transformData = (chartDatas, channelNames) => {
 }
 
 const generateLabels = (start, numPoints) => {
-    const s = moment(start)
+    const s = dayjs(start)
     return [...Array(numPoints).keys()].map((v) => {
-        const newTime = s;
-        newTime.add(1, 'hours');
-        return newTime.toISOString();
+        return s.add(1, 'hours').format("YYYY-MM-DD HH:MM");
     })
 }
 
