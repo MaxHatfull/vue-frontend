@@ -29,7 +29,7 @@
 }
 
 .App-header h1, h2 {
-  margin: 0px 0px 0px 20px;
+  margin: 10px 0px 0px 20px;
   color: #ffffff;
   font-family: 'Bungee';
 }
@@ -45,10 +45,6 @@
 
 .login {
   width: 33%;
-}
-
-.login button {
-  margin: 10px;
 }
 
 .login input {

@@ -21,12 +21,12 @@ function Login({ loginSuccess }){
       }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form className="login" onSubmit={handleSubmit}>
           <label>
-            Username: <input type="text" name="username" onChange={ e => setUsername(e.target.value) }/>
+            <input placeholder="username" type="text" name="username" onChange={ e => setUsername(e.target.value) }/>
           </label>
           <label>
-            Password: <input type="password" name="password" onChange={ e => setPassword(e.target.value) }/>
+            <input placeholder="password" type="password" name="password" onChange={ e => setPassword(e.target.value) }/>
           </label>
           <button type="submit">Login</button>
         </form>
