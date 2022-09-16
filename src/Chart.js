@@ -30,6 +30,14 @@ const lineColors = [
 ]
 
 export const options = {
+  plugins: {
+    legend: {
+      labels: {
+        color: "white",
+        boxHeight: 3,
+      }
+    }
+  },
   scales: {
     xAxes: {
       title: {
